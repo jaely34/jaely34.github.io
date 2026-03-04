@@ -1,102 +1,27 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaely34 | Personal Links</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #0f172a;
-        background-image: radial-gradient(
-          circle at top right,
-          #1e293b,
-          #0f172a
-        );
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .glass:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(59, 130, 246, 0.5);
-        transform: translateY(-2px);
-      }
-    </style>
-  </head>
-  <body
-    class="min-h-screen flex flex-col items-center justify-center p-6 text-slate-200"
-  >
-    <div class="text-center mb-10">
-      <div class="relative w-32 h-32 mx-auto mb-4">
-        <div
-          class="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-20 animate-pulse"
-        ></div>
-        <img
-          src="https://ui-avatars.com/api/?name=Jaely+34&background=3b82f6&color=fff&size=256"
-          alt="Profile"
-          class="relative w-full h-full rounded-full border-4 border-slate-800 object-cover shadow-2xl"
-        />
-      </div>
-      <h1 class="text-3xl font-bold text-white tracking-tight">Jaely34</h1>
-      <p class="text-blue-400 font-mono text-sm mt-2 tracking-widest uppercase">
-        Junior Web Developer
-      </p>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
 
-    <div class="w-full max-w-sm space-y-4">
-      <a
-        href="https://github.com/jaely34"
-        target="_blank"
-        class="glass flex items-center p-4 rounded-2xl transition-all duration-300 group"
-      >
-        <div
-          class="bg-slate-700 p-3 rounded-xl group-hover:bg-blue-600 transition-colors"
-        >
-          <i class="fab fa-github text-xl text-white"></i>
-        </div>
-        <span class="ml-4 font-semibold text-lg">GitHub Portfolio</span>
-        <i class="fas fa-external-link-alt ml-auto text-slate-500 text-xs"></i>
-      </a>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    
+    <!-- Marker -->
+    <a-marker preset="hiro">
+      
+      <!-- Object 3D -->
+      <a-box position="0 0.5 0"
+             material="color: red;"
+             scale="1 1 1">
+      </a-box>
 
-      <a
-        href="#"
-        target="_blank"
-        class="glass flex items-center p-4 rounded-2xl transition-all duration-300 group"
-      >
-        <div
-          class="bg-slate-700 p-3 rounded-xl group-hover:bg-emerald-500 transition-colors"
-        >
-          <i class="fas fa-laptop-code text-xl text-white"></i>
-        </div>
-        <span class="ml-4 font-semibold text-lg">Latest Web Project</span>
-        <i class="fas fa-external-link-alt ml-auto text-slate-500 text-xs"></i>
-      </a>
+    </a-marker>
 
-      <a
-        href="#"
-        target="_blank"
-        class="glass flex items-center p-4 rounded-2xl transition-all duration-300 group"
-      >
-        <div
-          class="bg-slate-700 p-3 rounded-xl group-hover:bg-pink-500 transition-colors"
-        >
-          <i class="fab fa-instagram text-xl text-white"></i>
-        </div>
-        <span class="ml-4 font-semibold text-lg">Connect on Instagram</span>
-        <i class="fas fa-external-link-alt ml-auto text-slate-500 text-xs"></i>
-      </a>
-    </div>
+    <!-- Camera -->
+    <a-entity camera></a-entity>
 
-    <footer class="mt-16 text-slate-500 text-xs text-center">
-      <p>Built with Tailwind CSS & Hosted on GitHub</p>
-      <div class="mt-2 h-1 w-8 bg-blue-500 mx-auto rounded-full"></div>
-    </footer>
-  </body>
+  </a-scene>
+</body>
 </html>
